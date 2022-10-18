@@ -80,19 +80,57 @@
 			<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
 
 					<!-- section 1 -->
-					<section id="tm-section-1" class="tm-section">
-						<div class="ml-auto">
-							<header class="mb-4"><h1 class="tm-text-shadow">Constructive Design</h1></header>
-							<p class="mb-5 tm-font-big">Aenean fermentum vestibulum ipsum, ut pretium erat sodales sodales. Pellentesque quis orci vitae dui commodo sodales et ut quam. Etiam vitae egestas purus, ut malesuada enim.</p>
-							<a href="#" class="btn tm-btn tm-font-big" data-nav-link="#tmNavLink2">Continue...</a> 
-							<!-- data-nav-link holds the ID of nav item, which means this link should behave the same as that nav item  -->
+					<section id="tm-section-1" class="tm-section">						
+						<div class="row mb-4">
+							<header class="col-xl-12"><h2 class="tm-text-shadow">As mais tocadas</h2></header>		
 						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+								<div class="media tm-bg-transparent-black tm-border-white">
+									<i class="fab fa-apple tm-icon-circled tm-icon-media"></i>
+									<div class="media-body">
+										<h3>HTML Templates</h3>
+										<p>We provide a variety of templates for you at no cost. Please spread a word about <a href="https://plus.google.com/+tooplate" target="_parent">Tooplate</a> website. Thank you.</p>	
+									</div>
+								</div>
+							</div>	
+							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+								<div class="media tm-bg-transparent-black tm-border-white">
+									<i class="fas fa-map-pin mr-4 tm-icon-circled tm-icon-media"></i>	
+									<div class="media-body">
+										<h3>Free Images</h3>
+										<p>Photos by <a href="https://unsplash.com" target="_blank">Unsplash.com</a> website, ac ornare arcu finibus sed. Aenean ultrices nisi sit amet facilisis viverra.</p>	
+									</div>
+								</div>
+							</div>
+							<header class="col-xl-12"><h2 class="tm-text-shadow">Lançamentos</h2></header>
+							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+								<div class="media tm-bg-transparent-black tm-border-white">
+									<i class="fab fa-fly mr-4 tm-icon-circled tm-icon-media"></i>
+									<div class="row mb-4">		
+									</div>
+									<div class="media-body">
+										<h3>Phasellus eleifend</h3>
+										<p>Phasellus feugiat scelerisque sapien, ac ornare arcu finibus sed. Aenean ultrices nisi sit amet facilisis viverra.</p>		
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+								<div class="media tm-bg-transparent-black tm-border-white">
+									<i class="fab fa-linode mr-4 tm-icon-circled tm-icon-media"></i>
+									<div class="media-body">
+										<h3>Phasellus eleifend</h3>
+										<p>Phasellus feugiat scelerisque sapien, ac ornare arcu finibus sed. Aenean ultrices nisi sit amet facilisis viverra.</p>	
+									</div>
+								</div>
+							</div>			          		
+						</div>						               
 					</section>
 
 					<!-- section 2 -->
 					<section id="tm-section-2" class="tm-section tm-section-carousel">
 						<div>
-							<header class="mb-4"><h2 class="tm-text-shadow">Our Products</h2></header>		            
+							<header class="mb-4"><h2 class="tm-text-shadow">Playlists</h2></header>		            
 							<div class="tm-img-container">
 								<div class="tm-img-slider">
 									<a href="img/gallery-img-01.jpg" class="tm-slider-img"><img src="img/gallery-img-01-tn.jpg" alt="Image" class="img-fluid"></a>
@@ -109,7 +147,7 @@
 					<!-- section 3 -->
 					<section id="tm-section-3" class="tm-section">						
 						<div class="row mb-4">
-							<header class="col-xl-12"><h2 class="tm-text-shadow">Our Company</h2></header>		
+							<header class="col-xl-12"><h2 class="tm-text-shadow">Pesquisa</h2></header>		
 						</div>
 						<div class="row">
 							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
