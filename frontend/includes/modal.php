@@ -46,14 +46,16 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary sb-w-700" data-dismiss="modal">
-            Fechar
+        <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
+            Cancelar
+        </button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Registrar
         </button>
         <button 
-            class="btn sb-btn-secondary sb-w-700"
-            id="editar"
+            class="btn btn-secondary sb-w-700"
         >
-            Salvar
+            Entrar
         </button>
     </div>
 </div>
