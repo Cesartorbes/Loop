@@ -14,7 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/tooplate-style.css">
-<link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.png">
+	<?php include_once('includes/modal.php')?>
 	<script>
 		var renderPage = true;
 
@@ -50,25 +51,25 @@
 							<li>
 								<a href="#intro" id="tmNavLink1" class="scrolly active" data-bg-img="constructive_bg_01.jpg" data-page="#tm-section-1">
 									<i class="fas fa-home tm-nav-fa-icon"></i>
-									<span>Introduction</span>
+									<span>Início</span>
 								</a>
 							</li>
 							<li>
 								<a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-2" data-page-type="carousel">
-									<i class="fas fa-map tm-nav-fa-icon"></i>
-									<span>Our Products</span>
+									<i class="fas fa-music tm-nav-fa-icon"></i>
+									<span>Playlists</span>
 								</a>
 							</li>							
 							<li>
 								<a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
-									<i class="fas fa-users tm-nav-fa-icon"></i>
-									<span>Our Company</span>
+									<i class="fas fa-search tm-nav-fa-icon"></i>
+									<span>Pesquisa</span>
 								</a>
 							</li>
 							<li>
-								<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
-									<i class="fas fa-comments tm-nav-fa-icon"></i>
-									<span>Contact Us</span>
+								<a data-toggle="modal" data-target="#modal-perfil" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+									<i class="fas fa-user tm-nav-fa-icon"></i>
+									<span>Perfil</span>
 								</a>
 							</li>
 						</ul>
@@ -191,9 +192,7 @@
 					</section>					
 				</div>	<!-- .tm-content -->							
 				<footer class="footer-link">
-					<p class="tm-copyright-text">Copyright &copy; 2018 Constructive Co. Ltd. 
-                    
-                    - Design: <a rel="nofollow" href="https://www.tooplate.com">Tooplate</a></p>
+					<p class="tm-copyright-text">Copyright &copy; 2022 Loop Co. Ltd.</p>
 				</footer>
 			</div>	<!-- row -->			
 		</div>
@@ -206,7 +205,7 @@
 		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 		<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
-
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script>
 
 		var sidebarVisible = false;
