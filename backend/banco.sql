@@ -11,17 +11,23 @@
         email VARCHAR(120) NOT NULL,
         telefone varchar(20) NOT NULL,
         dataentrada date NOT NULL,
-        premium INT default 0,
+        premium INT DEFAULT 0,
         PRIMARY KEY (usuario_id)
     );
     CREATE TABLE musica(
         musica_id INT NOT NULL AUTO_INCREMENT,
         nome VARCHAR(100) NOT NULL, 
-        datacadastro date NOT NULL,
-        premium INT,
-        destaque INT,
-        lancamento INT,
+        destaque INT DEFAULT 0,
+        lancamento INT DEFAULT 0,
         PRIMARY KEY (musica_id)
+    )
+
+    CREATE TABLE playlist(
+        playlist_id INT NOT NULL AUTO_INCREMENT,
+        nome VARCHAR(100) NOT NULL,
+        destaque INT DEFAULT 0,
+        lancamento INT DEFAULT 0,
+        PRIMARY KEY (playlist_id)
     )
 
     INSERT INTO `usuario`(`nome`, `senha`, `email`, `telefone`,`dataentrada`,`premium`) VALUES ('admin','123','admin@gmail.com','(00) 0000-0000','2022-10-04','1');
