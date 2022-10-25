@@ -5,7 +5,6 @@ Template 2102 Constructive
 http://www.tooplate.com/view/2102-constructive
 
 */
-
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -113,6 +112,7 @@ p:last-child { margin-bottom: 0; }
     background: rgba(0,0,0,0.5);
     color: white;
     z-index: 1000;
+
 }
 
 .tm-content {
