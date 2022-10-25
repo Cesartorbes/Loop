@@ -11,6 +11,7 @@ try{
 switch ($dados['registro']) {
     case 1:
         if($dados['senha'] == $dados['confirmpassword']){
+            global $conn;
             $query = $conn->prepare('SELECT * FROM usuario WHERE email = :email');
             $query->execute([
                 ':email' => $dados['email']           
@@ -34,7 +35,7 @@ switch ($dados['registro']) {
                             title: 'Parabéns',
                             text: 'Seu cadastro foi realizado com sucesso!'
                         }).then(function() {
-                            window.location = '../frontend/usuarios.php';
+                            window.location = '../frontend/index.php';
                         });
                     </script></body></html>";
             
@@ -49,7 +50,7 @@ switch ($dados['registro']) {
                         title: 'Oops...',
                         text: 'E-mail ja cadastrado.'
                         }).then(function() {
-                            window.location = '../frontend/usuarios.php';
+                            window.location = '../frontend/index.php';
                         });
                     </script></body></html>";
             }
@@ -65,7 +66,7 @@ switch ($dados['registro']) {
                         title: 'Oops...',
                         text: 'As senhas não coicidem.'
                         }).then(function() {
-                            window.location = '../frontend/usuarios.php';
+                            window.location = '../frontend/index.php';
                         });
                     </script></body></html>";
         }

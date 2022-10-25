@@ -11,7 +11,7 @@
         email VARCHAR(120) NOT NULL,
         telefone varchar(20) NOT NULL,
         dataentrada date NOT NULL,
-        premium INT,
+        premium INT default 0,
         PRIMARY KEY (usuario_id)
     );
 

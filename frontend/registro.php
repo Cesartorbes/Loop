@@ -60,14 +60,26 @@
 			</div>
         
             <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
-                <form>
+                <form method="post" name="registro" action="../backend/inserir.php">
+					<input type="hidden" value="1" name="registro" id="registro">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">s
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Insira o nome do usuario" name="nome">
                     </div>
+					<div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Insira o seu e-mail" name="email">
+                    </div>
+					<div class="form-group">
+						<label for="telefone">Telefone</label>
+						<input type="tel" class="form-control" id="telefone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="Insira o seu telefone" name="telefone">
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">
+                    </div>
+					<div class="form-group">
+                        <label for="confirmpassword">Confirmar senha</label>
+                        <input type="password" class="form-control" id="confirmpassword" placeholder="Confirmar senha"  name="confirmpassword">
                     </div>
                     <button type="submit" class="btn btn-primary">Criar conta</button>
                 </form>
