@@ -25,6 +25,19 @@
    		alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
    		renderPage = false;
 	}
+
+	const handlePhone = (event) => {
+		let input = event.target
+		input.value = phoneMask(input.value)
+	}
+
+	const phoneMask = (value) => {
+		if (!value) return ""
+		value = value.replace(/\D/g,'')
+		value = value.replace(/(\d{2})(\d)/,"($1) $2")
+		value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+		return value
+	}
 	</script>
 </head>
 
@@ -72,7 +85,7 @@
                     </div>
 					<div class="form-group">
 						<label for="telefone">Telefone</label>
-						<input type="tel" class="form-control" id="telefone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="Insira o seu telefone" name="telefone">
+						<input type="tel" maxlength="15" class="form-control" id="telefone" onkeyup="handlePhone(event)" placeholder="Insira o seu telefone" name="telefone">
                     <div class="form-group">
                         <label for="senha">Senha</label>
                         <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">

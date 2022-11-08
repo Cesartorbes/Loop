@@ -18,12 +18,14 @@ switch ($dados['registro']) {
             ]);
             // Se houver um item com esse nome no banco, ele não insere
             if($query->fetch(PDO::FETCH_ASSOC) == null){
+
                 $query = $conn->prepare('INSERT INTO usuario (nome, senha, email, telefone, dataentrada) VALUES (:nome, :senha, :email, :telefone, CURRENT_TIMESTAMP());');
             $query->execute([
                 ':nome' => $dados['nome'],
-                ':senha' => $dados['senha'],
+                ':senha' => md5($dados['senha']),
                 ':email' => $dados['email'],
                 ':telefone' => $dados['telefone']
+
             ]);
             echo "<html>
                     <body>
