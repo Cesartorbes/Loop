@@ -1,3 +1,4 @@
+<?php include_once('includes/modal.php')?>
 <!DOCTYPE html>
 <html>
 <head>

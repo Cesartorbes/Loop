@@ -71,9 +71,9 @@
 					</nav>
 				</div>
 			</div>
-        
-            <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
-                <form method="post" name="registro" action="../backend/inserir.php">
+			
+            <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6 tm-content justify-content-md-center">
+                <form method="post" name="registro" action="../backend/inserir.php" id="registro">
 					<input type="hidden" value="1" name="registro" id="registro">
                     <div class="form-group">
                         <label for="nome">Nome</label>
@@ -86,6 +86,7 @@
 					<div class="form-group">
 						<label for="telefone">Telefone</label>
 						<input type="tel" maxlength="15" class="form-control" id="telefone" onkeyup="handlePhone(event)" placeholder="Insira o seu telefone" name="telefone">
+					</div>
                     <div class="form-group">
                         <label for="senha">Senha</label>
                         <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha">
