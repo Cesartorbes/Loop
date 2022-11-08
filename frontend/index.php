@@ -14,8 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="stylesheet" href="css/tooplate-style.css">
-	<link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.png">
-	<?php include_once('includes/modal.php')?>
+	<link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.svg">
 	<script>
 		var renderPage = true;
 
@@ -85,12 +84,8 @@
 							<header class="col-xl-12"><h2 class="tm-text-shadow">As mais tocadas</h2></header>	
 							<div class="tm-img-container">
 								<div class="tm-img-slider">
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-01-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-02-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-03-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-04-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-05-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-06-tn.jpg" alt="Image" class="img-fluid"></a>
+								<?php include_once('includes/musica.php')?>
+									
 								</div>
 							</div>		
 							<header class="col-xl-12"><h2 class="tm-text-shadow">Lançamentos</h2></header>
@@ -99,9 +94,9 @@
 									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-01.png" alt="Image" class="img-fluid"></a>
 									<a class="tm-slider-img"><img height="480" width="480" src="https://s2.glbimg.com/azx84ro4uuGSsQ3_UldnckX1CZQ=/fit-in/940x590/e.glbimg.com/og/ed/f/original/2013/12/18/capa_sertanejo_garcia.jpg" alt="Image" class="img-fluid"></a>
 									<a class="tm-slider-img"><img height="480" width="480" src="http://2.bp.blogspot.com/-_0HlfQ_P_2g/VgMfmt5QWZI/AAAAAAAA4VY/8NohHxUHCHQ/s1600/paulafernandesamanhecercapa.png" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-04-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-05-tn.jpg" alt="Image" class="img-fluid"></a>
-									<a class="tm-slider-img"><img height="480" width="480" src="img/gallery-img-06-tn.jpg" alt="Image" class="img-fluid"></a>
+									<a class="tm-slider-img"><img height="480" width="480" src="https://urbanartsdecor.files.wordpress.com/2020/12/the-dark-side-of-the-moon-minimalista.jpg?w=800" alt="Image" class="img-fluid"></a>
+									<a class="tm-slider-img"><img height="480" width="480" src="https://i.pinimg.com/236x/56/03/5e/56035ebb562a74e42c5e219ae058b70f.jpg" alt="Image" class="img-fluid"></a>
+									<a class="tm-slider-img"><img height="480" width="480" src="http://3.bp.blogspot.com/-uW82HnOSESs/U0h3alfuC1I/AAAAAAAAo6Y/B3K1iCLV4uw/s1600/edsheeranx.jpg" alt="Image" class="img-fluid"></a>
 								</div>
 							</div>		          		
 						</div>						               
