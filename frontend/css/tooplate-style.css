@@ -343,6 +343,8 @@ footer a { color: white; }
         top: 0;
     }
     
+     
+
     .menu-icon {
         padding: 10px 15px;
         background: #000000c4;
@@ -560,3 +562,4 @@ footer a { color: white; }
 .no-js #loader-wrapper {
     display: none;
 }
+
