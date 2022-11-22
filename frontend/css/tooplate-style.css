@@ -687,3 +687,9 @@ footer a { color: white; }
   width: 0%;
   transition: width 0.1s linear;
 }
+
+.inputlogin{
+  background-color:#343a40;
+  border-radius: 4px;
+  width: 350px;
+}

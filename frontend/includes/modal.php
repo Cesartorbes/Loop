@@ -5,28 +5,29 @@
 </div>
  -->
 <div class="modal fade" id="modal-perfil" tabindex="-1" role="dialog" aria-hidden="true">
+<link rel="stylesheet" href="../css/tooplate-style.css">
 <div class="modal-dialog" role="document">
     <div class="modal-content bg-dark">
         <div class="modal-header">
             <h5 class="modal-title sb-txt-primary sb-w-700">
                 Entrar
             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true" class="sb-txt-white">
+                <span aria-hidden="true" class="sb-txt-dark">
                     &times;
                 </span>
             </button>
         </div>
         <div class="modal-body">
-            <form id="form-perfil" method="POST" action="/elsalvador/entrar.php">
+            <form id="form-perfil" method="POST" action="/../index.php">
                     <!-- Nome -->
                     <div class='form-group row'>
-                        <label for='inputPassword' class='col-sm-4 col-form-label sb-txt-white'>
+                        <label for='inputPassword' class='col-sm-2 col-form-label sb-txt-white'>
                             Nome:
                         </label>
                         <div class='col-sm-8'>
                             <input 
                                 type='text' 
-                                class='form-control-plaintext sb-form-input pl-2 cursor-na' 
+                                class="inputlogin" 
                                 name='nome'
                                 id='input-nome'
                             >
@@ -34,13 +35,13 @@
                     </div>
                     <!-- Telefone -->
                     <div class='form-group row'>
-                        <label for='inputPassword' class='col-sm-4 col-form-label sb-txt-white'>
+                        <label for='inputPassword' class='col-sm-2 col-form-label sb-txt-white'>
                             Senha:
                         </label>
                         <div class='col-sm-8' class="opacity-25">
                             <input 
                                 type='text' 
-                                class='form-control-plaintext sb-form-input pl-2 maskTelefone cursor-na' 
+                                class='inputlogin' 
                                 name='senha'
                                 id='input-senha'
                             >
