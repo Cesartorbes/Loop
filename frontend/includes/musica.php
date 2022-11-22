@@ -26,24 +26,17 @@
             }
 
             foreach ($musicas as $musica) {
-                echo '<a data-toggle="modal" data-target="#modal-musica" class="tm-slider-img"><img src="', $musica, '" alt="Image" height="480" width="480" class="img-fluid"></img></a>';
+                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img src="', $musica, '" alt="Image" height="480" width="480" class="img-fluid"></img></a>';
             }
         }
+        function layoutmusica(){
 
-        ?>
-
-        <div class="modal fade" id="modal-musica" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1>Music Player</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                   echo '<div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true" class="sb-txt-white">
                                 &times;
                             </span>
                         </button>
-                    </div>
-                    <div class="modal-body">
                         <div class="music-container" id="music-container">
                             <div class="music-info">
                                 <h4 id="title"></h4>
@@ -69,7 +62,5 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </div>';}
+                    ?>

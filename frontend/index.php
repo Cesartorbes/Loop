@@ -198,8 +198,10 @@
 								</div>
 							</div>
 						</div>
-					</section>					
-				</div>	<!-- .tm-content -->							
+					</section>		
+					<?php layoutmusica(); ?>			
+				</div>	<!-- .tm-content -->
+										
 				<footer class="footer-link">
 					<p class="tm-copyright-text">Copyright &copy; 2022 Loop Co. Ltd.</p>
 				</footer>
