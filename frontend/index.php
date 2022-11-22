@@ -92,7 +92,7 @@
 							<header class="col-xl-12"><h2 class="tm-text-shadow">Lançamentos</h2></header>
 							<div class="tm-img-container">
 								<div class="tm-img-slider">
-									<?php listar('maistocadas') ?>
+									<?php listar('lancamentos') ?>
 								</div>
 							</div>		          		
 						</div>						               

@@ -69,7 +69,7 @@
 </div>
 
 <?php session_start();
-include_once(__DIR__ . '..\..\backend\conecta.php');
+include_once(__DIR__ . '\..\..\backend\conecta.php');
 if(isset($_POST['login']))
   {
     $email = $_POST['email'];
