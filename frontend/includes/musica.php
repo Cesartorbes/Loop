@@ -24,10 +24,52 @@
             } else {
                 $musicas = $maistocadas;
             }
-            
+
             foreach ($musicas as $musica) {
-                echo '<a class="tm-slider-img"><img src="', $musica, '" alt="Image" height="480" width="480" class="img-fluid"></img></a>';
+                echo '<a data-toggle="modal" data-target="#modal-musica" class="tm-slider-img"><img src="', $musica, '" alt="Image" height="480" width="480" class="img-fluid"></img></a>';
             }
         }
 
         ?>
+
+        <div class="modal fade" id="modal-musica" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1>Music Player</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true" class="sb-txt-white">
+                                &times;
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="music-container" id="music-container">
+                            <div class="music-info">
+                                <h4 id="title"></h4>
+                                <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                            </div>
+
+                            <audio src="../music/ukulele.mp3" id="audio"></audio>
+
+                            <div class="img-container">
+                                <img src="images/ukulele.jpg" alt="music-cover" id="cover" />
+                            </div>
+                            <div class="navigation">
+                                <button id="prev" class="action-btn">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                                <button id="play" class="action-btn action-btn-big">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="next" class="action-btn">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
