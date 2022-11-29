@@ -1,4 +1,7 @@
-<?php include_once('includes/modal.php')?>
+<?php 
+include_once('includes/modal.php');
+include_once('..\backend\conecta.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,12 +70,28 @@
 									<span>Pesquisa</span>
 								</a>
 							</li>
-							<li>
+							<?php 
+							$banco = new Banco;
+							if (isset($_SESSION["usuario_id"])){
+								$id=$_SESSION['usuario_id'];
+								$query = "SELECT nome from usuario where usuario_id = $id";
+								$result = mysqli_query($conn ,$query)or die(mysql_error());
+								$row = mysqli_fetch_assoc($result);
+								echo('<li>
+								<a data-toggle="modal" data-target="#modal-perfil" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+									<i class="fas fa-user tm-nav-fa-icon"></i>
+									<span>Olá ' .$row['nome']. '</span>
+								</a>
+							</li>');
+							}else{
+								echo('<li>
 								<a data-toggle="modal" data-target="#modal-perfil" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
 									<i class="fas fa-user tm-nav-fa-icon"></i>
 									<span>Perfil</span>
 								</a>
-							</li>
+							</li>');
+							}
+							?>
 						</ul>
 					</nav>
 				</div>
