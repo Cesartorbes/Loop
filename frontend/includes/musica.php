@@ -11,6 +11,7 @@
             ];
 
             $maistocadas = [
+                'https://i1.sndcdn.com/avatars-xJQjwsZ0zMGavKMs-xrrIfA-t500x500.jpg',
                 'https://static-cse.canva.com/blob/971063/1600w-1Nr6gsUndKw.jpg',
                 'https://i.scdn.co/image/ab67616d0000b2733d9a8f667919780f17b39dda',
                 'https://iscale.iheart.com/catalog/album/186462138',

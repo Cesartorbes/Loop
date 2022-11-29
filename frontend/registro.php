@@ -41,7 +41,7 @@
 	</script>
 </head>
 
-<body>
+<body class="registrobg">
 	<!-- Loader -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -53,24 +53,7 @@
 	<div class="container-fluid tm-main">
 		<div class="row tm-main-row">
 
-			<!-- Sidebar -->
-			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
-
-				<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
-
-				<div class="inner">
-					<nav id="tmMainNav" class="tm-main-nav">
-						<ul>
-							<li>
-								<a href="index.php" id="tmNavLink1" class="scrolly active" data-bg-img="constructive_bg_01.jpg" data-page="#tm-section-1">
-									<i class="fas fa-home tm-nav-fa-icon"></i>
-									<span>Início</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
+			<?php include_once('includes/sidebar.php') ?>
 			
             <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6 tm-content justify-content-md-center">
                 <form method="post" name="registro" action="../backend/inserir.php" id="registro">

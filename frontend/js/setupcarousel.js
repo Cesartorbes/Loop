@@ -4,11 +4,6 @@ var currentPageID = "#tm-section-1";
 // Setup Carousel
 function setupCarousel() {
 
-	// If current page isn't Carousel page, don't do anything.
-	
-	if($('#tm-section-1').css('display') == "none"){}
-	else {	// If current page is Carousel page, set up the Carousel.
-
 		var slider = $('.tm-img-slider');
 		var windowWidth = $(window).width();
 
@@ -50,16 +45,13 @@ function setupCarousel() {
 		  // other options
 		});
 	  }
-  }
+  
 
   // Setup Nav
   function setupNav() {
 	  // Add Event Listener to each Nav item
 	 $(".tm-main-nav a").click(function(e){
-		 e.preventDefault();
 		
-		var currentNavItem = $(this);
-		changePage(currentNavItem);
 		
 		setupCarousel();
 		setupFooter();
@@ -69,30 +61,7 @@ function setupCarousel() {
 	});	    
   }
 
-  function changePage(currentNavItem) {
-	  // Update Nav items
-	  $(".tm-main-nav a").removeClass("active");
-	 currentNavItem.addClass("active");
-
-	$(currentPageID).hide();
-
-	// Show current page
-	currentPageID = currentNavItem.data("page");
-	$(currentPageID).fadeIn(1000);
-
-	// Change background image
-	var bgImg = currentNavItem.data("bgImg");
-	$.backstretch("img/" + bgImg);		    	
-  }
-
-  // Setup Nav Toggle Button
-  function setupNavToggle() {
-
-	$("#tmMainNavToggle").on("click", function(){
-		$(".sidebar").toggleClass("show");
-	});
-  }
-
+  
   // If there is enough room, stick the footer at the bottom of page content.
   // If not, place it after the page content
   function setupFooter() {
@@ -140,12 +109,6 @@ function setupCarousel() {
 			});
 		}
 		  
-		  // Hide all pages
-		  allPages.hide();
-
-		  $("#tm-section-1").fadeIn();
-
-		 // Set up background first page
 		 var bgImg = $("#tmNavLink1").data("bgImg");
 		 
 		 $.backstretch("img/" + bgImg, {fade: 500});

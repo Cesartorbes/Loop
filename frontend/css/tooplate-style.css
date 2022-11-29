@@ -693,3 +693,12 @@ footer a { color: white; }
   border-radius: 4px;
   width: 350px;
 }
+.playlistsbg{
+  background-image: url("img/constructive_bg_02");
+}
+.pesquisarbg{
+  background-image: url("img/constructive_bg_03");
+}
+.registrobg{
+  background-image: url("img/constructive_bg_04");
+}
