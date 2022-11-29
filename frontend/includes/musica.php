@@ -11,7 +11,7 @@
             ];
 
             $maistocadas = [
-                'https://i1.sndcdn.com/artworks-FtWRByRryFHguWGW-4LumPw-t500x500.jpg',
+                'https://static-cse.canva.com/blob/971063/1600w-1Nr6gsUndKw.jpg',
                 'https://i.scdn.co/image/ab67616d0000b2733d9a8f667919780f17b39dda',
                 'https://iscale.iheart.com/catalog/album/186462138',
                 'https://akamai.sscdn.co/tb/letras-blog/wp-content/uploads/2020/05/2d5e80f-5-zeze-di-camargo-luciano.jpg',
@@ -31,7 +31,7 @@
         }
         function layoutmusica(){
 
-                   echo '<div class="modal-body">
+                   echo '<div class="modal-body" draggable="true">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true" class="sb-txt-white">
                                 &times;
