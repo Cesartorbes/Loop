@@ -11,8 +11,9 @@
         <div class="modal-header">
             <h5 class="modal-title sb-txt-primary sb-w-700">
                 Entrar
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true" class="sb-txt-dark">
+            </h5>
+            <button type="button" class="close float-right" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true" class="sb-txt-dark float-right">
                     &times;
                 </span>
             </button>
@@ -22,7 +23,7 @@
                     <!-- Nome -->
                     <div class='form-group row'>
                         <label for='inputPassword' class='col-sm-2 col-form-label sb-txt-white'>
-                            Nome:
+                            Email:
                         </label>
                         <div class='col-sm-8'>
                             <input 
@@ -56,12 +57,10 @@
         <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
             Cancelar
         </button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='registro.php'">
             Registrar
         </button>
-        <button 
-            class="btn btn-secondary sb-w-700"
-        >
+        <button name="login" class="btn btn-secondary sb-w-700" type="submit">
             Entrar
         </button>
     </div>
