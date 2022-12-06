@@ -93,26 +93,37 @@ function setupCarousel() {
 		// Remove loader
 		  $('body').addClass('loaded');
 
-		  // Page transition
-		  var allPages = $(".tm-section");
-
 		  // Handle click of "Continue", which changes to next page
 		  // The link contains data-nav-link attribute, which holds the nav item ID
 		  // Nav item ID is then used to access and trigger click on the corresponding nav item
-		  var linkToAnotherPage = $("a.tm-btn[data-nav-link]");
-		
-		if(linkToAnotherPage != null) {
-			
-			linkToAnotherPage.on("click", function(){
-				var navItemToHighlight = linkToAnotherPage.data("navLink");
-				$("a" + navItemToHighlight).click();
-			});
-		}
 		  
-		 var bgImg = $("#tmNavLink1").data("bgImg");
+		var page = window.location.pathname
+		var pageatual = page.split('/')[3]
+
+		switch (pageatual) {
+			case "pesquisar.php":
+				var bgImg = "constructive_bg_03.jpg";
+				$('#tmNavLink3').addClass('active');
+				break;
+				
+				case "playlist.php":
+				var bgImg = "constructive_bg_02.jpg";
+				$('#tmNavLink2').addClass('active');
+				break;
+
+				case "index.php":
+				var bgImg = "constructive_bg_01.jpg";
+				$('#tmNavLink1').addClass('active');
+				break;
+
+				case "registro.php":
+				var bgImg = "constructive_bg_04.jpg";
+				$('#tmNavLink4').addClass('active');
+				
+				break;
+		}
 		 
 		 $.backstretch("img/" + bgImg, {fade: 500});
-
 		 // Setup Carousel, Nav, and Nav Toggle
 		setupCarousel();
 		setupNav();

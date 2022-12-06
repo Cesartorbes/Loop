@@ -32,7 +32,7 @@
         }
         function layoutmusica(){
 
-                   echo '<div class="modal-body" draggable="true">
+                  /*  echo '<div class="modal-body" draggable="true">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true" class="sb-txt-white">
                                 &times;
@@ -63,5 +63,5 @@
                                 </button>
                             </div>
                         </div>
-                    </div>';}
+        </div>'; */}
                     ?>

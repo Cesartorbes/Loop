@@ -6,19 +6,19 @@
                     <nav id="tmMainNav" class="tm-main-nav">
                         <ul>
                             <li>
-                                <a href="index.php" id="tmNavLink1" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-1">
+                                <a href="index.php" id="tmNavLink1" class="scrolly">
                                     <i class="fas fa-home tm-nav-fa-icon"></i>
                                     <span>Início</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="playlist.php" id="tmNavLink2" class="scrolly active" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-2" data-page-type="carousel">
+                                <a href="playlist.php" id="tmNavLink2" class="scrolly">
                                     <i class="fas fa-music tm-nav-fa-icon"></i>
                                     <span>Playlists</span>
                                 </a>
                             </li>                          
                             <li>
-                                <a href="pesquisar.php" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
+                                <a href="pesquisar.php" id="tmNavLink3" class="scrolly">
                                     <i class="fas fa-search tm-nav-fa-icon"></i>
                                     <span>Pesquisa</span>
                                 </a>
@@ -31,14 +31,14 @@
                                 $result = mysqli_query($conn ,$query)or die(mysql_error());
                                 $row = mysqli_fetch_assoc($result);
                                 echo('<li>
-                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" id="tmNavLink4">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
                                     <span>Olá ' .$row['nome']. '</span>
                                 </a>
                             </li>');
                             }else{
                                 echo('<li>
-                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" id="tmNavLink4">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
                                     <span>Perfil</span>
                                 </a>
