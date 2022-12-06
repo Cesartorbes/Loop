@@ -112,12 +112,12 @@ function setupCarousel() {
 				break;
 
 				case "index.php":
-				var bgImg = "constructive_bg_01.jpg";
+				var bgImg = "constructive_bg_04.jpg";
 				$('#tmNavLink1').addClass('active');
 				break;
 
 				case "registro.php":
-				var bgImg = "constructive_bg_04.jpg";
+				var bgImg = "constructive_bg_01.jpg";
 				$('#tmNavLink4').addClass('active');
 				
 				break;
