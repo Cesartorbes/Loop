@@ -28,7 +28,7 @@
                             if (isset($_SESSION["usuario_id"])){
                                 $id=$_SESSION['usuario_id'];
                                 $query = "SELECT nome from usuario where usuario_id = $id";
-                                $result = mysqli_query($conn ,$query)or die(mysql_error());
+                                $result = mysqli_query($conn ,$query);
                                 $row = mysqli_fetch_assoc($result);
                                 echo('<li>
                                 <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" id="tmNavLink4">
