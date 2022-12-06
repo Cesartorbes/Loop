@@ -1,5 +1,6 @@
 <?php
 include_once('includes/modal.php');
+include_once('includes/modalupload.php');
 include_once('..\backend\conecta.php');
 ?>
 <!DOCTYPE html>

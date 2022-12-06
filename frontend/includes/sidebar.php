@@ -45,6 +45,12 @@
                             </li>');
                             }
                             ?>
+                              <li>
+                                <a data-toggle="modal" data-target="#modal-upload" id="tmNavLink3" class="scrolly">
+                                    <i class="fas fa-plus tm-nav-fa-icon"></i>
+                                    <span>Adicionar música</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
