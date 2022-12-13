@@ -107,7 +107,7 @@ if(isset($_POST['entrar'])){
           title: 'Parabéns',
           text: 'Seu login foi realizado com sucesso!'
         }).then(function() {
-            window.location = '../index.php';
+            window.location = '../frontend/index.php';
         });
         
         </script>";

@@ -702,3 +702,10 @@ footer a { color: white; }
 .registrobg{
   background-image: url("img/constructive_bg_04");
 }
+.hoverlogout:hover span {
+  display: none
+}
+
+.hoverlogout:hover:after {
+  content: "Deslogar"
+}

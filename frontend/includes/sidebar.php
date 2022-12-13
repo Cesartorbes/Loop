@@ -32,7 +32,7 @@
                                 $resultUsuarioLogado = mysqli_query($conn1, $query);
                                 $dadosUsuarioLogado = mysqli_fetch_assoc($resultUsuarioLogado);
                                 echo('<li>
-                                <a class="scrolly" href="../frontend/logout.php">
+                                <a class="scrolly hoverlogout" style="white-space: nowrap;" href="../frontend/logout.php">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
                                     <span>Olá ' .ucwords($dadosUsuarioLogado['nome']). '</span>
                                 </a>

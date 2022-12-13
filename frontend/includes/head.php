@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/loop.css">
     <link rel="icon" type="image/x-icon" href="/loop/frontend/img/favicon/favicon-32x32.svg">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
