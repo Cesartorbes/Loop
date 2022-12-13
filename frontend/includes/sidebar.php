@@ -32,17 +32,12 @@
                                 $resultUsuarioLogado = mysqli_query($conn1, $query);
                                 $dadosUsuarioLogado = mysqli_fetch_assoc($resultUsuarioLogado);
                                 echo('<li>
-                                <a class="scrolly">
+                                <a class="scrolly" href="../frontend/logout.php">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
                                     <span>Olá ' .ucwords($dadosUsuarioLogado['nome']). '</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="../frontend/logout.php" class="scrolly">
-                                    <i class="fas fa-user tm-nav-fa-icon"></i>
-                                    <span>Deslogar</span>
-                                </a>
-                            </li>');
+                            ');
                             }else{
                                 echo('<li>
                                 <a data-toggle="modal" data-target="#modal-perfil" id="tmNavLink4">
