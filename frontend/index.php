@@ -39,7 +39,7 @@
                         </div>                                    
                     </section>
  
-                    <?php layoutmusica(); ?>            
+                             
                 </div>  <!-- .tm-content -->
             </div>  <!-- row -->            
         </div>

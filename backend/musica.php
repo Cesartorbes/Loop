@@ -36,12 +36,7 @@
         }
         function layoutmusica(){
 
-                    echo '<div class="modal-body" draggable="true">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true" class="sb-txt-white">
-                                &times;
-                            </span>
-                        </button>
+                    echo '<div class="modal-body">
                         <div class="music-container" id="music-container">
                             <div class="music-info">
                                 <h4 id="title"></h4>
