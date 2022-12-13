@@ -3,7 +3,7 @@
 <head>
     <?php 
 	include_once('includes/head.php');
-	include_once('includes/musica.php')?>
+	?>
 </head>
 
 <body>
@@ -17,8 +17,19 @@
 	<!-- Page Content -->
 	<div class="container-fluid tm-main">
 		<div class="row tm-main-row">
-
-			<?php include_once('includes/sidebar.php') ?>
+			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">			
+	        	<button id="tmMainNavToggle" class="menu-icon">&#9776;</button> 
+				<nav id="tmMainNav" class="tm-main-nav">
+					<ul>
+						<li>
+							<a href="index.php" id="tmNavLink1" class="scrolly">
+								<i class="fas fa-home tm-nav-fa-icon"></i>
+								<span>Início</span>
+							</a>
+						</li>  
+					</ul>
+                </nav>
+            </div>
 			
             <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6 tm-content justify-content-md-center">
                 <form method="post" name="registro" action="../backend/inserir.php" id="registro">
