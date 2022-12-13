@@ -30,6 +30,12 @@
                                     <span>Olá ' .ucwords($dadosUsuarioLogado['nome']). '</span>
                                 </a>
                             </li>
+                            <li>
+                                <a data-toggle="modal" data-target="#modal-upload" id="tmNavLink3" class="scrolly">
+                                    <i class="fas fa-plus tm-nav-fa-icon"></i>
+                                    <span>Adicionar música</span>
+                                </a>
+                            </li>
                             ');
                             }else{
                                 echo('<li>
@@ -40,12 +46,6 @@
                             </li>');
                             }
                             ?>
-                              <li>
-                                <a data-toggle="modal" data-target="#modal-upload" id="tmNavLink3" class="scrolly">
-                                    <i class="fas fa-plus tm-nav-fa-icon"></i>
-                                    <span>Adicionar música</span>
-                                </a>
-                            </li>
                             <?php layoutmusica(); ?>   
                         </ul>
                     </nav>
