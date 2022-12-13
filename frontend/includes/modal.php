@@ -19,7 +19,7 @@
             </button>
         </div>
         <div class="modal-body">
-            <form id="form_login" method="POST">
+            <form id="form_login" method="POST" action="../backend/login.php">
                     <!-- Nome -->
                     <div class='form-group row'>
                         <label for='inputPassword' class='col-sm-2 col-form-label sb-txt-white'>
@@ -69,59 +69,3 @@
 </div>
 </div>
 </div>
-
-<?php
-
-
-$conn = mysqli_connect("localhost","root","", "loopdb");
-
-if(isset($_POST['entrar'])){
-    
-    if(empty($_POST['email']) || empty($_POST['senha'])){
-        echo "
-        <script>
-                Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Preencha todos os campos antes de prosseguir.'
-                })
-                </script>";
-    }else{
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $senha = mysqli_real_escape_string($conn, $_POST['senha']);
-        $query = " SELECT * FROM usuario WHERE email = '$email' and senha = '$senha' ";
-
-        $result = mysqli_query($conn, $query);
-
-        $dadosUsuario = mysqli_fetch_assoc($result);
-
-        $row = mysqli_num_rows($result);
-
-        if($row == 1){
-            $_SESSION = $dadosUsuario;
-                 echo "
-        <script>
-        
-        Swal.fire({
-          icon: 'success',
-          title: 'Parabéns',
-          text: 'Seu login foi realizado com sucesso!'
-        }).then(function() {
-            window.location = '../frontend/index.php';
-        });
-        
-        </script>";
-        }else{
-             echo "
-             <script>
-             Swal.fire({
-               icon: 'error',
-               title: 'Oops...',
-               text: 'Usuário ou senha inválidos.'
-             })
-             
-             </script>";
-            }
-        }
-    }
-?>

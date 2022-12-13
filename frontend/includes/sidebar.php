@@ -10,13 +10,7 @@
                                     <i class="fas fa-home tm-nav-fa-icon"></i>
                                     <span>Início</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="playlist.php" id="tmNavLink2" class="scrolly">
-                                    <i class="fas fa-music tm-nav-fa-icon"></i>
-                                    <span>Playlists</span>
-                                </a>
-                            </li>                          
+                            </li>                         
                             <li>
                                 <a href="pesquisar.php" id="tmNavLink3" class="scrolly">
                                     <i class="fas fa-search tm-nav-fa-icon"></i>
