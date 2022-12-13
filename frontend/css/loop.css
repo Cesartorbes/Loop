@@ -574,7 +574,7 @@ footer a { color: white; }
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 100px 0;
+  margin: 50px 0;
   z-index: 10;
 }
 
@@ -676,7 +676,7 @@ footer a { color: white; }
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
-  height: 4px;
+  height: 2px;
   width: 100%;
 }
 

@@ -2,7 +2,6 @@
  
                 <button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
  
-                <div class="inner">
                     <nav id="tmMainNav" class="tm-main-nav">
                         <ul>
                             <li>
@@ -47,7 +46,7 @@
                                     <span>Adicionar música</span>
                                 </a>
                             </li>
+                            <?php layoutmusica(); ?>   
                         </ul>
                     </nav>
-                </div>
             </div>
