@@ -26,19 +26,26 @@
                             <?php
                             $banco = new Banco;
                             if (isset($_SESSION["usuario_id"])){
+                                $conn1 = mysqli_connect("localhost", "root", "", "loopdb");
                                 $id=$_SESSION['usuario_id'];
                                 $query = "SELECT nome from usuario where usuario_id = $id";
-                                $result = mysqli_query($conn ,$query);
-                                $row = mysqli_fetch_assoc($result);
+                                $resultUsuarioLogado = mysqli_query($conn1, $query);
+                                $dadosUsuarioLogado = mysqli_fetch_assoc($resultUsuarioLogado);
                                 echo('<li>
-                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" id="tmNavLink4">
+                                <a class="scrolly">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
-                                    <span>Olá ' .$row['nome']. '</span>
+                                    <span>Olá ' .ucwords($dadosUsuarioLogado['nome']). '</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../frontend/logout.php" class="scrolly">
+                                    <i class="fas fa-user tm-nav-fa-icon"></i>
+                                    <span>Deslogar</span>
                                 </a>
                             </li>');
                             }else{
                                 echo('<li>
-                                <a data-toggle="modal" data-target="#modal-perfil" class="scrolly" id="tmNavLink4">
+                                <a data-toggle="modal" data-target="#modal-perfil" id="tmNavLink4">
                                     <i class="fas fa-user tm-nav-fa-icon"></i>
                                     <span>Perfil</span>
                                 </a>
