@@ -32,3 +32,4 @@ CREATE DATABASE IF NOT EXISTS loopdb;
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Do not disturb', 'images/Do not disturb.jpg', 0);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Si tu veux', 'images/Si tu veux .jpg', 1)
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Summer', 'images/Summer.jpg', 1)
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Infozinho bixaredo', 'images/Infozinho bixaredo.jpg', 1)
