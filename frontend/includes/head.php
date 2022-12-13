@@ -11,4 +11,17 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/tooplate-style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.svg">
+    <link rel="icon" type="image/x-icon" href="/loop/frontend/img/favicon/favicon-32x32.svg">
+    <script>
+        var renderPage = true;
+ 
+    if(navigator.userAgent.indexOf('MSIE')!==-1
+        || navigator.appVersion.indexOf('Trident/') > 0){
+        /* Microsoft Internet Explorer detected in. */
+        alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+        renderPage = false;
+    }
+    </script>
+    <?php include_once('includes/modal.php');
+    include_once('includes/modalupload.php');
+    include_once('..\backend\conecta.php'); ?>

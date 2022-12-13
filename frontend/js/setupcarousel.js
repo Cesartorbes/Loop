@@ -119,8 +119,13 @@ function setupCarousel() {
 				case "registro.php":
 				var bgImg = "constructive_bg_01.jpg";
 				$('#tmNavLink4').addClass('active');
-				
 				break;
+
+				default:
+				var bgImg = "constructive_bg_04.jpg";
+				$('#tmNavLink1').addClass('active');
+				break;
+				
 		}
 		 
 		 $.backstretch("img/" + bgImg, {fade: 500});
