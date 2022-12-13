@@ -1,47 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Loop</title>
-
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
-	<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<link rel="stylesheet" href="css/tooplate-style.css">
-	<link rel="icon" type="image/x-icon" href="img/favicon/favicon-32x32.png">
-	<?php include_once('includes/modal.php')?>
-	<script>
-		var renderPage = true;
-
-	if(navigator.userAgent.indexOf('MSIE')!==-1
-		|| navigator.appVersion.indexOf('Trident/') > 0){
-   		/* Microsoft Internet Explorer detected in. */
-   		alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
-   		renderPage = false;
-	}
-
-	const handlePhone = (event) => {
-		let input = event.target
-		input.value = phoneMask(input.value)
-	}
-
-	const phoneMask = (value) => {
-		if (!value) return ""
-		value = value.replace(/\D/g,'')
-		value = value.replace(/(\d{2})(\d)/,"($1) $2")
-		value = value.replace(/(\d)(\d{4})$/,"$1-$2")
-		return value
-	}
-	</script>
+    <?php 
+	include_once('includes/head.php');
+	include_once('includes/musica.php')?>
 </head>
 
-<body class="registrobg">
+<body>
 	<!-- Loader -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -82,15 +47,21 @@
                 </form>
             </div>  
         </div>      
-        
-		<div id="preload-01"></div>
-		<div id="preload-02"></div>
-		<div id="preload-03"></div>
-		<div id="preload-04"></div>
 
-		<?php 
-	
-	include_once('includes/scripts.php')?>
+		<?php include_once('includes/scripts.php')?>
+		<script>
+	const handlePhone = (event) => {
+		let input = event.target
+		input.value = phoneMask(input.value)
+	}
 
+	const phoneMask = (value) => {
+		if (!value) return ""
+		value = value.replace(/\D/g,'')
+		value = value.replace(/(\d{2})(\d)/,"($1) $2")
+		value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+		return value
+	}
+	</script>
 	</body>
 </html>
