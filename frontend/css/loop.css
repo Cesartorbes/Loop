@@ -709,3 +709,7 @@ footer a { color: white; }
 .hoverlogout:hover:after {
   content: "Deslogar"
 }
+
+.imgquadrada{
+  min-height: 300px; min-width: 300px; max-height: 300px; max-width: 300px;
+}

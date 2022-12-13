@@ -37,14 +37,13 @@
                         <label style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
                             Imagem da capa:
                         </label>
-                        <input type="file" name="img" required/>
+                        <input type="file" name="arquivoimg" required/>
                         <label  style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
                             Arquivo da música:
                         </label>
-                        <input type="file" name="msc" required/>
+                        <input type="file" name="arquivomsc" required/>
                         </div>
                     </div>
-        </form>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">
@@ -53,6 +52,7 @@
         <button name="login" class="btn btn-secondary sb-w-700" type="submit">
             Cadastrar
         </button>
+        </form>
     </div>
 </div>
 </div>
