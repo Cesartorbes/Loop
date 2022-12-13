@@ -7,12 +7,10 @@
  } catch(PDOException $e){
      echo 'Falha ao salvar os arquivos. Favor, tente mais tarde.';
  }
-
-            $query = $conn->prepare('SELECT * FROM musica');
-            $query->execute([
-                ':email' => $dados['email']           
-            ]);
-
+ global $conn;
+            $query = $conn->query('SELECT * FROM musica');
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+print_r($query);
 
         function listar($categoria)
         {
