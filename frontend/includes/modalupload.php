@@ -37,11 +37,11 @@
                         <label style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
                             Imagem da capa:
                         </label>
-                        <input type="file" name="arquivo" required/>
+                        <input type="file" name="img" required/>
                         <label  style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
                             Arquivo da música:
                         </label>
-                        <input type="file" name="arquivo" required/>
+                        <input type="file" name="msc" required/>
                         </div>
                     </div>
         </form>

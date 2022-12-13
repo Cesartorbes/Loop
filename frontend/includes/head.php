@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/tooplate-style.css">
     <link rel="icon" type="image/x-icon" href="/loop/frontend/img/favicon/favicon-32x32.svg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
     <script>
         var renderPage = true;
  

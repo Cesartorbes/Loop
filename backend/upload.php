@@ -1,51 +1,23 @@
 <?php
  
 // Pasta onde o arquivo vai ser salvo
-$_UP['pasta'] = 'uploads/';
- 
-// Tamanho máximo do arquivo (em Bytes)
-$_UP['tamanho'] = 1024 * 1024 * 2; // 2Mb
- 
+$_UP['pastaimg'] = '/loop/frontend/images/';
+$_UP['pastamusic'] = '/loop/frontend/images/';
+  
 // Array com as extensões permitidas
-$_UP['extensoes'] = array('jpg', 'png', 'gif');
+$_UP['extensaoimg'] = array('jpg', 'png');
+$_UP['extensaomsc'] = 'mp3';
  
-// Renomeia o arquivo? (Se true, o arquivo será salvo como .jpg e um nome único)
-$_UP['renomeia'] = false;
- 
-// Array com os tipos de erros de upload do PHP
-$_UP['erros'][0] = 'Não houve erro';
-$_UP['erros'][1] = 'O arquivo no upload é maior do que o limite do PHP';
-$_UP['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especifiado no HTML';
-$_UP['erros'][3] = 'O upload do arquivo foi feito parcialmente';
-$_UP['erros'][4] = 'Não foi feito o upload do arquivo';
- 
-// Verifica se houve algum erro com o upload. Se sim, exibe a mensagem do erro
-if ($_FILES['arquivo']['error'] != 0) {
-die("Não foi possível fazer o upload, erro:<br />" . $_UP['erros'][$_FILES['arquivo']['error']]);
-exit; // Para a execução do script
+// Faz a verificação da extensão do arquivo da musica e da imagem
+$extensaoimg = strtolower(end(explode('.', $_FILES['img']["name"])));
+$extensaomsc = strtolower(end(explode('.', $_FILES['msc']["name"])));
+if (array_search($extensaoimg, $_UP['extensaoimg']) === false) {
+echo "Por favor, envie imagens com as seguintes extensões: jpg, png";
+if ($extensaomsc != $_UP['extensaomsc']) {
+    echo "Por favor, envie músicas com a seguinte extensão: mp3";
 }
- 
-// Caso script chegue a esse ponto, não houve erro com o upload e o PHP pode continuar
- 
-// Faz a verificação da extensão do arquivo
-$extensao = strtolower(end(explode('.', $_FILES['arquivo']['name'])));
-if (array_search($extensao, $_UP['extensoes']) === false) {
-echo "Por favor, envie arquivos com as seguintes extensões: jpg, png ou gif";
 }
- 
-// Faz a verificação do tamanho do arquivo
-else if ($_UP['tamanho'] < $_FILES['arquivo']['size']) {
-echo "O arquivo enviado é muito grande, envie arquivos de até 2Mb.";
-}
- 
-// O arquivo passou em todas as verificações, hora de tentar movê-lo para a pasta
 else {
-// Primeiro verifica se deve trocar o nome do arquivo
-if ($_UP['renomeia'] == true) {
-// Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
-$nome_final = time().'.jpg';
-} else {
-// Mantém o nome original do arquivo
 $nome_final = $_FILES['arquivo']['name'];
 }
  
@@ -59,6 +31,5 @@ echo '<br /><a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acess
 echo "Não foi possível enviar o arquivo, tente novamente";
 }
  
-}
  
 ?>
