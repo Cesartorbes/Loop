@@ -14,14 +14,16 @@ const durTime = document.querySelector('#durTime');
 // Keep track of song
 
 function trocarmusica(index){
-	let songIndex = index
+	let cortarvar = index.split(".", 1);
+	let varfinal = cortarvar.substr(7);
+	console.log(varfinal);
+	let songIndex = varfinal.indexOf(songs);
 	loadSong(songs[songIndex]);
 	playSong();
 	
 }
-
+console.log(songs)
 let songIndex = 5;
-console.log(songIndex);
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
@@ -123,7 +125,7 @@ function DurTime (e) {
 	get_sec (currentTime,sec);
 
 	// change currentTime DOM
-	currTime.innerHTML = min +':'+ sec;
+
 
 	// define minutes duration
 	let min_d = (isNaN(duration) === true)? '0':
@@ -152,7 +154,7 @@ function DurTime (e) {
 	get_sec_d (duration);
 
 	// change duration DOM
-	durTime.innerHTML = min_d +':'+ sec_d;
+
 		
 };
 

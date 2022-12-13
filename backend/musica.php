@@ -10,31 +10,29 @@
         function listar($categoria)
         {
             global $conn;
-            $lancamentos['index'] = [];
-            $lancamentos['img'] = [];
-            $maistocadas['index'] = [];
-            $maistocadas['img'] = [];
+            $lancamentos = [];
+            $maistocadas = [];
            
             $query = $conn->query('SELECT * FROM musica');
             $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
            
                    foreach($resultados as $resultado) {
                        if ($resultado['destaque_lancamento'] == 1) {
-                           array_push($lancamentos['img'], $resultado['img']);
+                           array_push($lancamentos, $resultado['img']);
+                           //array_push($lancamentos['index'], $resultado['musica_id']);
                        } else {
-                           array_push($maistocadas['img'], $resultado['img']);
+                           array_push($maistocadas, $resultado['img']);
+                           //array_push($lancamentos['index'], $resultado['musica_id']);
                        }}
 
             if ($categoria == "lancamentos") {
-                $musicas = $lancamentos['img'];
-                $musicas['index'] = $lancamentos['index'];
+                $musicas = $lancamentos;
             } else {
-                $musicas = $maistocadas['img'];
-               $musicas['index'] = $maistocadas['index'];
+                $musicas = $maistocadas;
             }
-
             foreach ($musicas as $musica) {
-                echo '<a href="#" onClick="trocarmusica(',$musica['index'],');" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
+                echo '<a href="#" onClick="trocarmusica(',$musica,');" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
+
             }
         }
         function layoutmusica(){
@@ -44,7 +42,7 @@
             $musicas = [];
            
                    foreach($resultados as $resultado) {
-                           array_push($musicas, $resultado['img']);
+                           array_push($musicas, $resultado['nome']);
                        }
                     echo '<div class="modal-body">
                         <div class="music-container" id="music-container">
@@ -73,6 +71,9 @@
                             </div>
                         </div>
         </div>';
-    echo '<script>const songs = ["Sinfonia dos crias", "Do not disturb", "amiga da minha mulher","earfquake","Fair trade","finesse","golden hour","tutorial"]; </script>';
-    }
+
+    echo '<script>const songs = ',json_encode($musicas),' </script>';
+
+}
+        
                     ?>
