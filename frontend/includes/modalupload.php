@@ -22,7 +22,7 @@
                         <div class='col-sm-8'>
                             <input 
                                     type='text' 
-                                    class="inputmusica" 
+                                    class="inputmusica text-white" 
                                     name='musica'
                                     id='input-musica'
                                     placeholder="Nome da música"

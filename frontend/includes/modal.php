@@ -28,7 +28,7 @@
                         <div class='col-sm-8'>
                             <input 
                                 type='text' 
-                                class="inputlogin" 
+                                class="inputlogin text-white" 
                                 name='email'
                                 id="login_email"
                                 placeholder="E-mail"
@@ -43,7 +43,7 @@
                         <div class='col-sm-8' class="opacity-25">
                             <input 
                                 type='password' 
-                                class='inputlogin' 
+                                class='inputlogin text-white' 
                                 name='senha'
                                 id='login_senha'
                                 placeholder="Senha"
