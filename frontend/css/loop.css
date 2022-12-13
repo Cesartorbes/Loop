@@ -713,3 +713,9 @@ footer a { color: white; }
 .imgquadrada{
   min-height: 300px; min-width: 300px; max-height: 300px; max-width: 300px;
 }
+
+.inputmusica{
+  background-color:#343a40;
+  border-radius: 4px;
+  width: 300px;
+}
