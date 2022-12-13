@@ -4,6 +4,7 @@
         function listar($categoria)
         {
             $lancamentos = [
+                'images/amiga da minha mulher.jpg',
                 'img/gallery-img-01.png',
                 'https://s2.glbimg.com/azx84ro4uuGSsQ3_UldnckX1CZQ=/fit-in/940x590/e.glbimg.com/og/ed/f/original/2013/12/18/capa_sertanejo_garcia.jpg',
                 'http://2.bp.blogspot.com/-_0HlfQ_P_2g/VgMfmt5QWZI/AAAAAAAA4VY/8NohHxUHCHQ/s1600/paulafernandesamanhecercapa.png',
@@ -29,7 +30,7 @@
             }
 
             foreach ($musicas as $musica) {
-                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img src="', $musica, '" alt="Image" height="480" width="480" class="img-fluid"></img></a>';
+                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img class="imgquadrada" src="', $musica, '" alt="Image" class="img-fluid"></img></a>';
             }
         }
         function layoutmusica(){
@@ -60,7 +61,5 @@
                                 </button>
                             </div>
                         </div>
-        </div>
-    </container>'; }
+        </div>'; }
                     ?>
-
