@@ -7,20 +7,21 @@
  } catch(PDOException $e){
      echo 'Falha ao salvar os arquivos. Favor, tente mais tarde.';
  }
- global $conn;
-            $query = $conn->query('SELECT * FROM musica');
-            return $query->fetchAll(PDO::FETCH_ASSOC);
-print_r($query);
-
         function listar($categoria)
         {
-            $lancamentos = [
-
-            ];
-
-            $maistocadas = [
-
-            ];
+            global $conn;
+            $lancamentos = [];
+            $maistocadas = [];
+           
+            $query = $conn->query('SELECT * FROM musica');
+            $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
+           
+                   foreach($resultados as $resultado) {
+                       if ($resultado['destaque_lancamento'] == 1) {
+                           array_push($lancamentos, $resultado['img']);
+                       } else {
+                           array_push($maistocadas, $resultado['img']);
+                       }}
 
             if ($categoria == "lancamentos") {
                 $musicas = $lancamentos;
@@ -29,11 +30,10 @@ print_r($query);
             }
 
             foreach ($musicas as $musica) {
-                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img class="imgquadrada" src="', $musica, '" alt="Image" class="img-fluid"></img></a>';
+                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
             }
         }
         function layoutmusica(){
-
                     echo '<div class="modal-body">
                         <div class="music-container" id="music-container">
                             <div class="music-info">
