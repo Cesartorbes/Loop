@@ -10,27 +10,31 @@
         function listar($categoria)
         {
             global $conn;
-            $lancamentos = [];
-            $maistocadas = [];
+            $lancamentos['index'] = [];
+            $lancamentos['img'] = [];
+            $maistocadas['index'] = [];
+            $maistocadas['img'] = [];
            
             $query = $conn->query('SELECT * FROM musica');
             $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
            
                    foreach($resultados as $resultado) {
                        if ($resultado['destaque_lancamento'] == 1) {
-                           array_push($lancamentos, $resultado['img']);
+                           array_push($lancamentos['img'], $resultado['img']);
                        } else {
-                           array_push($maistocadas, $resultado['img']);
+                           array_push($maistocadas['img'], $resultado['img']);
                        }}
 
             if ($categoria == "lancamentos") {
-                $musicas = $lancamentos;
+                $musicas = $lancamentos['img'];
+                $musicas['index'] = $lancamentos['index'];
             } else {
-                $musicas = $maistocadas;
+                $musicas = $maistocadas['img'];
+               $musicas['index'] = $maistocadas['index'];
             }
 
             foreach ($musicas as $musica) {
-                echo '<a data-toggle="modal" data-target="#modal-musica" data-backdrop="static" data-keyboard="false" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
+                echo '<a href="#" onClick="trocarmusica(',$musica['index'],');" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
             }
         }
         function layoutmusica(){
@@ -69,6 +73,6 @@
                             </div>
                         </div>
         </div>';
-    echo '<script>const songs = ["hey", "summer", "ukulele", "Sinfonia dos crias", "tutorial", "amiga da minha mulher"] </script>';
+    echo '<script>const songs = ["Sinfonia dos crias", "Do not disturb", "amiga da minha mulher","earfquake","Fair trade","finesse","golden hour","tutorial"]; </script>';
     }
                     ?>
