@@ -31,7 +31,7 @@
                 $musicas = $maistocadas;
             }
             foreach ($musicas as $musica) {
-                echo '<a href="#" onClick="trocarmusica(',$musica,');" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
+                echo '<a href="#" onClick="trocarmusica(`',$musica,'`);" class="tm-slider-img"><img class="imgquadrada" src="../frontend/', $musica, '" alt="Image" class="img-fluid"></img></a>';
 
             }
         }

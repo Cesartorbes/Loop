@@ -23,7 +23,7 @@ CREATE DATABASE IF NOT EXISTS loopdb;
     INSERT INTO `usuario`(`nome`, `senha`, `email`, `telefone`,`dataentrada`) VALUES ('teste','123','tete@gmail.com','(99) 99999-9999','2022-10-04');
 
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Sinfonia dos crias','images/Sinfonia dos crias.jpg',1);
-    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Why we lose','images/why we lose.jpg',0);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Why we lose','images/Why we lose.jpg',0);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('amiga da minha mulher','images/amiga da minha mulher.jpg',1);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Fair trade', 'images/Fair trade.jpg', 0);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('earfquake', 'images/earfquake.jpg', 1);

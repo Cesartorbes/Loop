@@ -14,10 +14,11 @@ const durTime = document.querySelector('#durTime');
 // Keep track of song
 
 function trocarmusica(index){
-	let cortarvar = index.split(".", 1);
-	let varfinal = cortarvar.substr(7);
-	console.log(varfinal);
-	let songIndex = varfinal.indexOf(songs);
+	let cortarvar = index.substr(7);
+	let varfinal = cortarvar.substring(0, cortarvar.length - 4);
+
+	let songIndex = songs.findIndex(element => element.includes(varfinal))
+	console.log(songIndex)
 	loadSong(songs[songIndex]);
 	playSong();
 	
