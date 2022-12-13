@@ -19,9 +19,35 @@ $_UP['extensaomsc'] = 'mp3';
 $extensaoimg = strtolower(end(explode('.', $_FILES['arquivoimg']["name"])));
 $extensaomsc = strtolower(end(explode('.', $_FILES['arquivomsc']["name"])));
 if (array_search($extensaoimg, $_UP['extensaoimg']) === false) {
-echo "Por favor, envie imagens com as seguintes extensões: jpg, png";
+echo "<html>
+                    <body>
+                    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+ 
+                    <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Por favor, envie imagens com as seguintes extensões: jpg, png'
+                        }).then(function() {
+                            window.location = '../frontend/index.php';
+                        });
+                    </script></body></html>";
+    die();
 if ($extensaomsc != $_UP['extensaomsc']) {
-    echo "Por favor, envie músicas com a seguinte extensão: mp3";
+    echo "<html>
+    <body>
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+
+    <script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Por favor, envie músicas com a seguinte extensão: mp3'
+        }).then(function() {
+            window.location = '../frontend/index.php';
+        });
+    </script></body></html>";
+    die();
 }
 }
 $nomeimg = $_POST['musica'] . '.jpg';
@@ -35,7 +61,19 @@ $query = $conn->prepare('INSERT INTO musica (nome, img, destaque_lancamento) VAL
                 ':img' => 'images/' . $nomeimg,
                 ':destaque_lancamento' => mt_rand(0,1)
             ]);
-echo "Upload efetuado com sucesso!";
+echo "<html>
+<body>
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Parabéns',
+        text: 'A música foi adicionada com sucesso!'
+    }).then(function() {
+        window.location = '../frontend/index.php';
+    });
+</script></body></html>";
 } else {
 // Não foi possível fazer o upload, provavelmente a pasta está incorreta
 echo "Não foi possível enviar o arquivo, tente novamente";
