@@ -34,6 +34,14 @@
             }
         }
         function layoutmusica(){
+            global $conn;
+            $query = $conn->query('SELECT * FROM musica');
+            $resultados = $query->fetchAll(PDO::FETCH_ASSOC);
+            $musicas = [];
+           
+                   foreach($resultados as $resultado) {
+                           array_push($musicas, $resultado['img']);
+                       }
                     echo '<div class="modal-body">
                         <div class="music-container" id="music-container">
                             <div class="music-info">
@@ -43,10 +51,10 @@
                                 </div>
                             </div>
 
-                            <audio src="../music/ukulele.mp3" id="audio"></audio>
+                            <audio src="../frontend/music/tutorial.mp3" id="audio"></audio>
 
                             <div class="img-container">
-                                <img src="images/ukulele.jpg" alt="music-cover" id="cover" />
+                                <img src="../frontend/music/nao-cadastrada.jpg" alt="music-cover" id="cover" />
                             </div>
                             <div class="navigation">
                                 <button id="prev" class="action-btn">
@@ -60,5 +68,7 @@
                                 </button>
                             </div>
                         </div>
-        </div>'; }
+        </div>';
+    echo '<script>const songs = ["hey", "summer", "ukulele", "Sinfonia dos crias", "tutorial", "amiga da minha mulher"] </script>';
+    }
                     ?>

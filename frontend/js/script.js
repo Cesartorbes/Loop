@@ -11,11 +11,8 @@ const cover = document.getElementById('cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
-// Song titles
-const songs = ['hey', 'summer', 'ukulele', 'Sinfonia dos crias', 'tutorial', 'amiga da minha mulher'];
-
 // Keep track of song
-let songIndex = 0;
+let songIndex = 4;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
