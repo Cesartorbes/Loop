@@ -1,6 +1,4 @@
-    DROP DATABASE IF EXISTS loopdb;
-    
-    CREATE DATABASE IF NOT EXISTS loopdb;
+CREATE DATABASE IF NOT EXISTS loopdb;
     
     USE loopdb;
 
@@ -16,10 +14,17 @@
     CREATE TABLE musica(
         musica_id INT NOT NULL AUTO_INCREMENT,
         nome VARCHAR(100) NOT NULL, 
-        destaque INT DEFAULT 0,
-        lancamento INT DEFAULT 0,
+        img VARCHAR(100) DEFAULT 'images/nao-cadastrada.jpg',
+        destaque_lancamento INT NOT NULL,
         PRIMARY KEY (musica_id)
     );
 
     INSERT INTO `usuario`(`nome`, `senha`, `email`, `telefone`,`dataentrada`) VALUES ('admin','123','admin@gmail.com','(00) 00000-0000','2022-10-04');
     INSERT INTO `usuario`(`nome`, `senha`, `email`, `telefone`,`dataentrada`) VALUES ('teste','123','tete@gmail.com','(99) 99999-9999','2022-10-04');
+
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('hey','images/hey.jpg',1);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('summer','images/summer.jpg',0);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('ukulele','images/ukulele.jpg',1);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Sinfonia dos crias','images/Sinfonia dos crias.jpg',1);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('tutorial','images/tutorial.jpg',0);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('amiga da minha mulher','images/amiga da minha mulher.jpg',1);

@@ -15,7 +15,7 @@ const durTime = document.querySelector('#durTime');
 const songs = ['hey', 'summer', 'ukulele', 'Sinfonia dos crias', 'tutorial', 'amiga da minha mulher'];
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 0;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
