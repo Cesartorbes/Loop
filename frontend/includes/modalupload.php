@@ -1,6 +1,6 @@
 <div class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-hidden="true">
-<link rel="stylesheet" href="../css/tooplate-style.css">
-<div class="modal-dialog" role="document">
+<link rel="stylesheet" href="../css/loop.css">
+<div class="modal-dialog " id="modalup" role="document">
     <div class="modal-content bg-dark">
         <div class="modal-header">
             <h5 class="modal-title sb-txt-primary sb-w-700">
@@ -16,31 +16,33 @@
             <form id="form-upload" method="POST" action="/loop/backend/upload.php" enctype="multipart/form-data">
 
                     <div class='form-group row'>
-                         <div class='col-sm-8' class="opacity-25">
-                        <label for='nomemusica' style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
+                        <label for='nomemusica' style="white-space: nowrap;" class='col-sm-4 col-form-label sb-txt-white'>
                             Nome da música:
                         </label>
-                        <br />
-                        <input 
-                        
-                                type='text' 
-                                class="inputmusica" 
-                                name='musica'
-                                id='input-musica'
-        
-                        >
-</div>
+                        <div class='col-sm-8'>
+                            <input 
+                                    type='text' 
+                                    class="inputmusica" 
+                                    name='musica'
+                                    id='input-musica'
+                                    placeholder="Nome da música"
+                            >
+                        </div>
                     </div>
 
                     <div class='form-group row'>
-                        <div class='col-sm-8' class="opacity-25">
-                        <label style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
+                        <label style="white-space: nowrap;" class='col-sm-4 col-form-label sb-txt-white'>
                             Imagem da capa:
                         </label>
-                        <input type="file" name="arquivoimg" required/>
-                        <label  style="white-space: nowrap;" class='col-sm-2 col-form-label sb-txt-white'>
+                        <div class='col-sm-8' class="opacity-25">
+                            <input type="file" name="arquivoimg" required/>
+                        </div> 
+                    </div>    
+                    <div class='form-group row'>   
+                        <label  style="white-space: nowrap;" class='col-sm-4 col-form-label sb-txt-white'>
                             Arquivo da música:
                         </label>
+                        <div class='col-sm-8' class="opacity-25">
                         <input type="file" name="arquivomsc" required/>
                         </div>
                     </div>
