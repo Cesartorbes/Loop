@@ -26,3 +26,4 @@ CREATE DATABASE IF NOT EXISTS loopdb;
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('Why we lose','images/nao-cadastrada.jpg',0);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('amiga da minha mulher','images/amiga da minha mulher.jpg',1);
     INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('summer','images/summer',0);
+    INSERT INTO `musica`(`nome`, `img`,`destaque_lancamento`) VALUES ('all my friend are toxic','images/all my friend are toxic',0);
